@@ -7,7 +7,7 @@ import lombok.ToString;
 import java.util.List;
 
 @Getter @Setter @ToString
-public class FlowerPack  {
+public class FlowerPack{
     private  Flower flower;
     private int amount;
 
