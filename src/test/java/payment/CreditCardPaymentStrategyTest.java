@@ -29,13 +29,10 @@ class CreditCardPaymentStrategyTest {
         flower1.setPrice(33);
         flower2.setPrice(40);
         flower3.setPrice(10);
-        //set amount and create packs
-        pack1.setAmount(21);
-        pack2.setAmount(5);
-        pack3.setAmount(79);
-        bucket.setFlowerPacks(pack1);
-        bucket.setFlowerPacks(pack2);
-        bucket.setFlowerPacks(pack3);
+        //
+        bucket.addFlowers(flower1);
+        bucket.addFlowers(flower2);
+        bucket.addFlowers(flower3);
         //
         payment = new CreditCardPaymentStrategy();
 

@@ -17,13 +17,12 @@ public class FlowerBucket extends Item{
     @Override
     public double getPrice() {
         double price = 0;
-        for (int i=0; i < bucket.size(); i++){
-            price += bucket.get(i).getPrice();
+        for (Item item : bucket) {
+            price += item.getPrice();
         }
         return price;
     }
     public void addFlowers(Item item) {
-
         bucket.add(item);
     }
 

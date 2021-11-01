@@ -22,14 +22,13 @@ public class Main {
         pack.setAmount(10);
         //System.out.println(pack);
         FlowerBucket bucket = new FlowerBucket();
-        bucket.setFlowerPacks(pack);
         //for (int i=0; i < bucket.getFlowerPacks().size(); i++) {
             //System.out.println(bucket.getFlowerPacks().get(i));
 
         //}
-        Item flower = new Flower(FlowerType.ROSE);
+        Flower flower = new Flower(FlowerType.ROSE);
         System.out.println(flower);
-        ((Flower) flower).setPrice(10);
+        flower.setPrice(10);
         System.out.println(flower.getPrice());
         System.out.println(flower);
         Order order = new Order();
