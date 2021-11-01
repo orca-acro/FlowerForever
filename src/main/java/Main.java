@@ -16,10 +16,6 @@ public class Main {
             //System.out.println(flowers[i]);
             //System.out.println(flowers[i].getColor());
         //}
-        FlowerPack pack = new FlowerPack();
-        flowers[0].setPrice(56.90);
-        pack.setFlower(flowers[0]);
-        pack.setAmount(10);
         //System.out.println(pack);
         FlowerBucket bucket = new FlowerBucket();
         //for (int i=0; i < bucket.getFlowerPacks().size(); i++) {
