@@ -36,6 +36,6 @@ class PayPalPaymentStrategyTest {
 
     @Test
     void pay() {
-        assertEquals("You have to pay 1683.0 for your order using PayPal", payment.pay(bucket.getPrice()));
+        assertEquals("You have to pay 83.0 for your order using PayPal", payment.pay(bucket.getPrice()));
     }
 }

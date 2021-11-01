@@ -12,9 +12,6 @@ class CreditCardPaymentStrategyTest {
     private Flower flower1;
     private Flower flower2;
     private Flower flower3;
-    private FlowerPack pack1;
-    private FlowerPack pack2;
-    private FlowerPack pack3;
     private FlowerBucket bucket;
     private Payment payment;
 
@@ -40,6 +37,6 @@ class CreditCardPaymentStrategyTest {
 
     @Test
     void pay() {
-        assertEquals("You have to pay 1683.0 for your order using credit card", payment.pay(bucket.getPrice()));
+        assertEquals("You have to pay 83.0 for your order using credit card", payment.pay(bucket.getPrice()));
     }
 }
