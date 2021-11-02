@@ -22,6 +22,12 @@ public class FlowerBucket extends Item{
         }
         return price;
     }
+
+    @Override
+    public String getDescription() {
+        return "This is flower bucket";
+    }
+
     public void addFlowers(Item item) {
         bucket.add(item);
     }

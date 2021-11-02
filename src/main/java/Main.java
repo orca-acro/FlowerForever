@@ -1,3 +1,4 @@
+import decorators.RibbonDecorator;
 import delivery.DHLDeliveryStrategy;
 import delivery.Delivery;
 import flowerstore.*;
@@ -6,39 +7,17 @@ import payment.Payment;
 
 public class Main {
     public static void main(String[] args) {
-        Flower[] flowers = new Flower[3];
-        int[] color = {127, 0, 0};
-        for (int i=0; i < flowers.length; i++) {
-            flowers[i] = new Flower(FlowerType.ROSE);
-            flowers[i].setColor(color);
-        }
-        //for (int i=0; i< flowers.length; i++) {
-            //System.out.println(flowers[i]);
-            //System.out.println(flowers[i].getColor());
-        //}
-        //System.out.println(pack);
+        Flower flower1 = new Flower(FlowerType.ROSE);
+        Item cactus = new CactusFlower();
+        flower1.setPrice(45);
         FlowerBucket bucket = new FlowerBucket();
-        //for (int i=0; i < bucket.getFlowerPacks().size(); i++) {
-            //System.out.println(bucket.getFlowerPacks().get(i));
+        bucket.addFlowers(flower1);
+        bucket.addFlowers(cactus);
+        Item items = bucket;
+        items = new RibbonDecorator(items);
+        System.out.println(items.getDescription());
+        System.out.println(items.getPrice());
 
-        //}
-        Flower flower = new Flower(FlowerType.ROSE);
-        System.out.println(flower);
-        flower.setPrice(10);
-        System.out.println(flower.getPrice());
-        System.out.println(flower);
-        Order order = new Order();
-
-        order.addItem(flower);
-        Payment payment = new CreditCardPaymentStrategy();
-        Delivery delivery = new DHLDeliveryStrategy();
-        order.setDeliveryStrategy(delivery);
-        order.setPaymentStrategy(payment);
-
-
-
-
-        //strategy.setStrategy(DHLDeliveryStrategy());
 
     }
 }
