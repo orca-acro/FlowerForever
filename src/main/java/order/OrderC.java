@@ -1,9 +1,12 @@
 package order;
 
+
+import lombok.ToString;
+
 import java.util.ArrayList;
 import java.util.List;
-
-public class Order {
+@ToString
+public class OrderC {
     List<User> users = new ArrayList<>();
 
     public void addUser(User user) {
@@ -31,6 +34,10 @@ public class Order {
     }
     public void order() {
         notifyUsers();
+    }
+
+    public List getUsers() {
+        return this.users;
     }
 
 }
